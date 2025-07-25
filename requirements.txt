@@ -1,0 +1,7 @@
+ultralytics
+norfair
+opencv-python
+fastapi
+uvicorn
+easyocr
+torch

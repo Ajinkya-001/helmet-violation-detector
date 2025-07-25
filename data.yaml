@@ -1,0 +1,13 @@
+train: dataset/images/train
+val: dataset/images/val
+test: dataset/images/test
+
+nc: 2
+names: ['with_helmet', 'without_helmet']
+
+roboflow:
+  workspace: aaa-3jcwf
+  project: bike-helmet-detection-2vdjo-ghl79
+  version: 1
+  license: Public Domain
+  url: https://universe.roboflow.com/aaa-3jcwf/bike-helmet-detection-2vdjo-ghl79/dataset/1

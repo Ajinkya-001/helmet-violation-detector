@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.pyo
+*.pyd
+*.pyc
+
+# Virtual Envs
+venv/
+.env/
+
+# Output files
+/static/outputs/
+*.jpg
+*.png
+
+# VSCode
+.vscode/
+
+# Mac & Linux
+.DS_Store
