@@ -11,6 +11,8 @@ Features
 •	Annotated output video generation
 
 <img width="532" height="636" alt="Screenshot 2025-07-25 214759" src="https://github.com/user-attachments/assets/c1095586-4b52-407e-9355-a7dca85ca0df" />
+<img width="391" height="118" alt="Screenshot 2025-07-25 214808" src="https://github.com/user-attachments/assets/1c9958e6-2df8-4ec2-8973-758dce03f28a" />
+
 
 
 Setup Instructions
