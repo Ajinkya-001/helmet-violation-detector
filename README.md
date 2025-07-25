@@ -49,7 +49,7 @@ Open in browser: http://localhost:8000/docs
 
 
 
-###API Endpoints
+### API Endpoints
 
 Upload a video file and get the output annotated video.
 
@@ -58,7 +58,7 @@ curl -X 'POST' \
   'http://localhost:8000/upload/' \
   -F 'file=@/path/to/your/video.mp4'
 ```
-###Response:
+### Response:
 
 Returns path to the saved annotated video.
 
@@ -67,7 +67,7 @@ Returns path to the saved annotated video.
 
 <img width="733" height="347" alt="image" src="https://github.com/user-attachments/assets/79053b11-21f7-4b03-b0d9-07509799574f" />
 
-###Future Work 
+### Future Work 
 
 Live webcam/RTSP stream support
 
@@ -77,15 +77,15 @@ User dashboard with alert system
 
 Integration with traffic enforcement systems
 
-###Contributing
+### Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-###License
+### License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-Author 
+### Author 
 Ajinkya Patil
 
 B.Tech AI & Robotics @ DSU
