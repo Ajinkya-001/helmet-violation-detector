@@ -10,37 +10,7 @@ Features
 •	Dockerized for seamless deployment
 •	Annotated output video generation
 
-
-Project Structure
-helmet-violation-api/
-├── app/
-│ ├── pycache/
-│ ├── routes/
-│ ├── models/
-│ │ └── outputs/
-│ ├── static/
-│ ├── tests/
-│ │ ├── init.py
-│ │ ├── test_api.py
-│ │ └── test_detection.py
-│ ├── uploads/
-│ ├── init.py
-│ ├── detection.py # Detection logic
-│ ├── main.py # FastAPI application
-│ ├── ocr.py # License plate recognition
-│ ├── tracking.py # Object tracking
-│ └── utils.py # Helper functions
-├── outputs/ # Processed video outputs
-├── runs/ # Training runs (if applicable)
-├── env/ # Virtual environment (should be in .gitignore)
-├── .gitignore # Git ignore file
-├── best.pt # Trained YOLOv8 model weights
-├── data.yaml # Dataset configuration
-├── Dockerfile # Docker configuration
-├── image.png # Sample image
-├── README.md # Project documentation
-├── requirements.txt # Python dependencies
-└── yolov8n.pt # Base YOLOv8 model
+<img width="532" height="636" alt="Screenshot 2025-07-25 214759" src="https://github.com/user-attachments/assets/c1095586-4b52-407e-9355-a7dca85ca0df" />
 
 
 Setup Instructions
