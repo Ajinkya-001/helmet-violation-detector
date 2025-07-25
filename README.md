@@ -1,123 +1,94 @@
-# Helmet Violation Detection API
+# Helmet Violation Detection API 🚨🪖
 
-This project is an end-to-end helmet violation detection system built using YOLOv8 for object detection, Norfair for object tracking, and EasyOCR for license plate recognition. It provides a FastAPI interface for uploading videos and returning annotated output.
+[![Python](https://img.shields.io/badge/Python-3.10-blue.svg)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.110.0-green.svg)](https://fastapi.tiangolo.com/)
+[![Dockerized](https://img.shields.io/badge/Dockerized-Yes-blue)](https://www.docker.com/)
+[![YOLOv8](https://img.shields.io/badge/YOLOv8-Ultralytics-ff69b4)](https://docs.ultralytics.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-
-
-## Features
-
-- YOLOv8-based detection of:
-- 
-  - Riders with helmets
-  - 
-  - Riders without helmets
-    
-- Object tracking using Norfair for consistent identity assignment
-  
-- License plate recognition using EasyOCR
-  
-- FastAPI backend with Swagger documentation for testing
-  
-- Dockerized for seamless deployment
-  
-- Annotated output video generation
-
-
-
-## Project Structure
-
-
-<img width="383" height="601" alt="image" src="https://github.com/user-attachments/assets/dd6dfbbf-b3f3-4d6e-95fa-170f0506f35e" />
-
-
+A production-ready computer vision API to detect helmet violations and read number plates using YOLOv8, EasyOCR, and Norfair tracking. Built with FastAPI and Docker for seamless integration and deployment.
 
 ---
 
-## Setup Instructions
+## 🔍 Features
 
-### Prerequisites
+- 🚀 Real-time helmet violation detection (with/without helmet)
+- 🔢 OCR-based number plate extraction
+- 🎯 Object tracking using Norfair
+- 📁 API endpoints to upload video and get annotated output
+- 🐳 Fully dockerized for local or server deployment
+- 🧪 Built-in testing via Swagger UI (`/docs`)
 
-- Python 3.8 or later
-- `ffmpeg` installed on system
-- CUDA-enabled GPU (recommended for real-time inference)
+---
 
-### Local Installation
+## 📦 Tech Stack
+
+| Module       | Technology                |
+|--------------|---------------------------|
+| Model        | YOLOv8 (Ultralytics)      |
+| OCR          | EasyOCR                   |
+| Tracking     | Norfair                   |
+| API Server   | FastAPI                   |
+| Deployment   | Docker                    |
+| Language     | Python 3.10               |
+
+---
+
+## 🚀 Getting Started
+
+### 🐳 Docker (Recommended)
 
 ```bash
 git clone https://github.com/Ajinkya-001/helmet-violation-detector.git
-cd helmet-violation-api
-```
-```bash
-python3 -m venv venv
-source venv/bin/activate
-```
-```bash
-pip install -r requirements.txt
-```
-Running the Application
-```bash
-uvicorn app.main:app --reload
-```
-Navigate to http://127.0.0.1:8000/docs to access the Swagger UI and test the /upload/ endpoint. Output videos are saved in the outputs/ directory.
-
-Docker Deployment
-
-```bash
-
+cd helmet-violation-detector
 docker build -t helmet-api .
-docker run -p 8000:8000 -v $(pwd)/outputs:/app/outputs helmet-api
+docker run -p 8000:8000 helmet-api
 ```
 
-Access via: http://localhost:8000/docs
+Open in browser: http://localhost:8000/docs
 
 
-Model Information
 
-Trained using YOLOv8
+API Endpoints
 
-Two class labels:
+Upload a video file and get the output annotated video.
 
-  0: with_helmet
-   
-  1: without_helmet
+```bash
+curl -X 'POST' \
+  'http://localhost:8000/upload/' \
+  -F 'file=@/path/to/your/video.mp4'
+```
+Response:
 
-Stack 
+Returns path to the saved annotated video.
 
-  YOLOv8 (Ultralytics)
 
-  Norfair (Object Tracking)
+<img width="733" height="347" alt="image" src="https://github.com/user-attachments/assets/79053b11-21f7-4b03-b0d9-07509799574f" />
 
-  EasyOCR (License Plate Recognition)
+Future Work
 
-  FastAPI (Web Framework)
+Live webcam/RTSP stream support
 
-  Docker (Containerization)
+Deployment on edge devices (Jetson, Raspberry Pi)
 
-Roadmap
+User dashboard with alert system
 
- Export CSV logs of violations
- 
+Integration with traffic enforcement systems
 
- SQLite or NoSQL storage for incidents
- 
+Contributing
 
- Alerting system (email/SMS integration)
- 
-
- Web dashboard for monitoring violations
- 
-
- CI/CD integration (GitHub Actions)
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 License
 
- This project is licensed under the MIT License. For academic and research use only. Please ensure compliance with local    laws and privacy regulations when deploying in public environments.
+This project is licensed under the MIT License. See the LICENSE file for details.
 
- Author
- Ajinkya Patil
- Github:Ajinkya-001
- 
+Author 
+Ajinkya Patil
 
+B.Tech AI & Robotics @ DSU
+
+GitHub: Ajinkya-001
 
 
 
