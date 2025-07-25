@@ -63,6 +63,8 @@ Response:
 Returns path to the saved annotated video.
 
 
+PROJECT STRUCTURE 
+
 <img width="733" height="347" alt="image" src="https://github.com/user-attachments/assets/79053b11-21f7-4b03-b0d9-07509799574f" />
 
 Future Work
